@@ -1,19 +1,25 @@
 # import libraries
 from keras.preprocessing import image    
 from keras.applications.resnet50 import preprocess_input, decode_predictions, ResNet50
-
 from tqdm import tqdm
-#from extract_bottleneck_features import * 
+
+from flask import Flask
+from flask import render_template, request, jsonify
+
+import tempfile
+from werkzeug.utils import secure_filename
 
 import pickle
 import keras
 
+from PIL import Image
+
 import cv2                
 import matplotlib.pyplot as plt                        
-%matplotlib inline 
+
 
 # import dog names
-infile = open(dog_names,'rb')
+infile = open("dog_names",'rb')
 dog_names = pickle.load(infile)
 
 # Resnet for dog prediction
@@ -52,7 +58,7 @@ def face_detector(img_path):
 
 # image preparation
 def path_to_tensor(img_path):
-        '''
+    '''
     INPUT:
         'img_path' : path to a image file
     OUTPUT:
@@ -116,4 +122,30 @@ def dog_breed_prediction(img_path):
         breed = Resnet50_predict_breed(img_path)
         print("This is not a dog but it's look like a {}.".format(breed))
     else:
-        print("This looks niether human or dog, must be something else.")   
+        print("This looks niether human or dog, must be something else.")  
+        
+
+app = Flask(__name__)
+
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('master.html')
+
+@app.route('/go', methods = ['GET', 'POST'])
+def go():
+    if request.method == 'POST':
+        image_file = request.files['ImageFile']
+        image_file.save('save.jpg')
+        result = dog_breed_prediction('save.jpg')
+        
+        
+    return render_template('go.html', query=result)
+    
+    
+def main():
+    app.run(host='0.0.0.0', port=3001, debug=False, threaded=False)
+
+if __name__ == '__main__':
+    main()        
+
