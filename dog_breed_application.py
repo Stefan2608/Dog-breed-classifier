@@ -43,7 +43,7 @@ def face_detector(img_path):
     OUTPUT:
         return: "True" if a humna face in the image stored at img_path
     '''
-    face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+    face_cascade = cv2.CascadeClassifier('Respository/haarcascade_frontalface_alt.xml')
     img = cv2.imread(img_path)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray)
@@ -84,7 +84,7 @@ def Resnet50_predict_breed(img_path):
         return: prediction of dog breed 
     '''
     # loading trained model
-    Resnet50_model = keras.models.load_model('data/Resnet50.pkl')
+    Resnet50_model = keras.models.load_model('Respository/Resnet50.pkl')
     # extract bottleneck features
     bottleneck_feature = extract_Resnet50(path_to_tensor(img_path))
     predicted_vector = Resnet50_model.predict(bottleneck_feature)
