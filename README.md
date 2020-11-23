@@ -25,8 +25,8 @@
 ## File Descriptions <a name="files"></a>
 
  
-   * `Web application:`-dog_breed_application.py`launch a Flask web app to predict dog breed in pictures 
-   * `Juphyter notebook:`-dog_app.ipynb`Workbook of the project if you have any special interesst in more information
+   * `Web application:`  -dog_breed_application.py`launch a Flask web app to predict dog breed in pictures 
+   * `Juphyter notebook:`-dog_app.ipynb`Workbook of the project, if you have any special interest in more information
           
   
 ## Instructions<a name="instructions"></a>
