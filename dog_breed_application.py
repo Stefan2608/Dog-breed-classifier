@@ -3,21 +3,14 @@
 import keras
 from keras.preprocessing import image    
 from keras.applications.resnet50 import preprocess_input, decode_predictions, ResNet50
-
 from tqdm import tqdm
-
 from flask import Flask
 from flask import render_template, request, jsonify
-
 import tempfile
-
 import os
-
 import pickle
-
 import numpy as np
 from PIL import Image
-
 import cv2                
 import matplotlib.pyplot as plt                        
 
