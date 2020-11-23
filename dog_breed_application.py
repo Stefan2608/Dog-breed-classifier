@@ -1,22 +1,28 @@
 # import libraries
+
+import keras
 from keras.preprocessing import image    
 from keras.applications.resnet50 import preprocess_input, decode_predictions, ResNet50
+
 from tqdm import tqdm
 
 from flask import Flask
 from flask import render_template, request, jsonify
 
 import tempfile
-from werkzeug.utils import secure_filename
+
+import os
 
 import pickle
-import keras
 
+import numpy as np
 from PIL import Image
 
 import cv2                
 import matplotlib.pyplot as plt                        
 
+# path to image directory
+IMAGE_FOLDER = './images/' # image filepath
 
 # import dog names
 infile = open("dog_names",'rb')
@@ -49,7 +55,7 @@ def face_detector(img_path):
     OUTPUT:
         return: "True" if a humna face in the image stored at img_path
     '''
-    face_cascade = cv2.CascadeClassifier('Respository/haarcascade_frontalface_alt.xml')
+    face_cascade = cv2.CascadeClassifier('respository/haarcascade_frontalface_alt.xml')
     img = cv2.imread(img_path)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray)
@@ -90,7 +96,7 @@ def Resnet50_predict_breed(img_path):
         return: prediction of dog breed 
     '''
     # loading trained model
-    Resnet50_model = keras.models.load_model('Respository/Resnet50.pkl')
+    Resnet50_model = keras.models.load_model('respository/Resnet50.pkl')
     # extract bottleneck features
     bottleneck_feature = extract_Resnet50(path_to_tensor(img_path))
     predicted_vector = Resnet50_model.predict(bottleneck_feature)
@@ -106,9 +112,9 @@ def dog_breed_prediction(img_path):
         return: Image that its provided and message based on if its a human, dog or something else.
     '''
 # show image
-    img = Image.open(img_path)
-    plt.imshow(img)
-    plt.show()
+ #   img = Image.open(img_path)
+#    plt.imshow(img)
+#    plt.show()
     
 # human or dog detector
     human = face_detector(img_path)
@@ -117,15 +123,18 @@ def dog_breed_prediction(img_path):
 # if clause for dog breed detection
     if dog:
         breed = Resnet50_predict_breed(img_path)
-        print ("This is a dog and it's breed is {}.".format(breed))
+        label = ("This is a dog and it's breed is {}.".format(breed))
     elif human:
         breed = Resnet50_predict_breed(img_path)
-        print("This is not a dog but it's look like a {}.".format(breed))
+        label = ("This is not a dog but it's look like a {}.".format(breed))
     else:
-        print("This looks niether human or dog, must be something else.")  
-        
+        label = ("This looks niether human or dog, must be something else.")  
+    return label   
+
+
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = IMAGE_FOLDER
 
 @app.route('/')
 @app.route('/index')
@@ -135,12 +144,18 @@ def index():
 @app.route('/go', methods = ['GET', 'POST'])
 def go():
     if request.method == 'POST':
+        # Load image file
         image_file = request.files['ImageFile']
-        image_file.save('save.jpg')
-        result = dog_breed_prediction('save.jpg')
-        
-        
-    return render_template('go.html', query=result)
+        # Save image in image directory for display after prediciton 
+        image_file.save('images/save.jpg')
+        image = "save.jpg"
+        # Predict the breed
+        result = dog_breed_prediction('images/save.jpg')
+
+        pic= os.path.join(app.config['UPLOAD_FOLDER'], image)
+                                              
+     
+    return render_template('go.html', result=result, pic=pic)
     
     
 def main():
@@ -148,4 +163,3 @@ def main():
 
 if __name__ == '__main__':
     main()        
-
