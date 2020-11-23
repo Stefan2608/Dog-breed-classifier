@@ -25,8 +25,8 @@
 ## File Descriptions <a name="files"></a>
 
  
-   * `data:`-dog_breed_application.py`launch a Flask web app to predict dog breed in pictures 
-   * `data:`-dog_app.py`Workbook of the project if you have any special interesst in more information
+   * `Web application:`-dog_breed_application.py`launch a Flask web app to predict dog breed in pictures 
+   * `Juphyter notebook:`-dog_app.ipynb`Workbook of the project if you have any special interesst in more information
           
   
 ## Instructions<a name="instructions"></a>
@@ -40,7 +40,6 @@
 3. Go to http://0.0.0.0:3001/
 
 
-
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Must give credit to Udacity for the data. 
+Thank you Udacity for providing the project data! 
