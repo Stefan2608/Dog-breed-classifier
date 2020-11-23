@@ -3,9 +3,10 @@
 ### Table of Contents
 
 1. [Installation](#installation)
-2. [File Description](#files)
-3. [Insturctions](#instructions)
-4. [Licensing, Authors, and Acknowledgements](#licensing)
+2. [Directories](#directories)
+3. [File Description](#files)
+4. [Insturctions](#instructions)
+5. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
  To run the codes the following libraries need to be installed:
@@ -21,6 +22,11 @@
 - SQL Alchemy
 - Flask
 
+## Directories <a name="directories"></a>
+
+   - templates - directory with HTML files used by the web application
+   - respository - directory with trained model and neccessary data for the web application 
+   - images - folder where the uploaded pictures where saved temporarily
 
 ## File Descriptions <a name="files"></a>
 
