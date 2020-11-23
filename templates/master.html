@@ -46,7 +46,7 @@
             <div class="col-lg-12 form-group-lg">
                 <form action="/go" method="POST" enctype="multipart/form-data">
                   <label for="fileField" class="H3">Select image:</label>
-                    <input type="file" class="form-control form-control-lg" name="ImageFile" id="ImageFile" accept="image/jpeg">
+                    <input type="file" class="form-control form-control-lg" name="ImageFile" id="ImageFile">
                   <div class="col-lg-offset-5">
                         <button type="submit" class="btn btn-lg btn-success">Upload image</button>
                   </div>
@@ -58,7 +58,21 @@
 
 <div class="container">
         <div class="page-header">
-            <h1 class="text-center">Result</h1>
+            <h1>Result:</h1>
+          
+          <h4><i>{{result}}</i></h3>
+          <img src="{{pic}}"  width="300" height="300"/img>  
+          
+          
+         
+          
+          
+        
+
+          
+        
+          
+          
         </div>
 
 
