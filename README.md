@@ -11,6 +11,10 @@
  To run the codes the following libraries need to be installed:
  
 - Pandas
+- Keras
+- os
+- tqdm
+- cv2
 - Numpy
 - Pickle
 - Sci-kit Learn
@@ -22,13 +26,16 @@
 
  
    * `data:`-dog_breed_application.py`launch a Flask web app to predict dog breed in pictures 
+   * `data:`-dog_app.py`Workbook of the project if you have any special interesst in more information
           
   
 ## Instructions<a name="instructions"></a>
 
+1. Take care that the link for the image directory in the dog_breed_application is correct 
+"IMAGE_FOLDER = './images/' # image filepath" 
 
 2. Run the following command in the app's directory to run your web app.
-    `python dog_breed_applicaiton`
+    `python dog_breed_applicaiton.py`
 
 3. Go to http://0.0.0.0:3001/
 
