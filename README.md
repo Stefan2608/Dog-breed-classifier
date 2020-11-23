@@ -1,4 +1,4 @@
-# Dog breed prediction
+# Dog breed classifier
 
 ### Table of Contents
 
