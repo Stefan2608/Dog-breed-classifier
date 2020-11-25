@@ -35,10 +35,9 @@ This is the final project of my Udacity training to become a data scientist. The
 
 ## File Descriptions <a name="files"></a>
 
- 
-   * `Web application:`  -dog_breed_application.py`launch a Flask web app to predict dog breed in pictures.
-   * `Juphyter notebook:`-dog_app.ipynb`Workbook of the project, if you have any special interest in more information.
-   * `Project Overview:` -project_overview.pdf`This file provides an Overview how the project was approached.
+   - Web application:  -dog_breed_application.py`launch a Flask web app to predict dog breed in pictures.
+   - Juphyter notebook:-dog_app.ipynb`Workbook of the project, if you have any special interest in more information.
+   - Project Overview: -project_overview.pdf`This file provides an Overview how the project was approached.
           
   
 ## Instructions<a name="instructions"></a>
