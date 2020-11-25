@@ -10,18 +10,8 @@
 6. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
- To run the codes the following libraries need to be installed:
- 
-- Pandas
-- Keras
-- os
-- tqdm
-- cv2
-- Numpy
-- Pickle
-- Sci-kit Learn
-- SQL Alchemy
-- Flask
+
+You can find all libraries you need in the requirements.txt
 
 ## Project Motivation <a name=directories"></>
  
@@ -32,6 +22,7 @@ This is the final project of my Udacity training to become a data scientist. The
    - templates - directory with HTML files used by the web application
    - respository - directory with trained model and neccessary data for the web application 
    - images - folder where the uploaded pictures where saved temporarily
+   - requirements.txt - all python libraries
 
 ## File Descriptions <a name="files"></a>
 
@@ -42,7 +33,7 @@ This is the final project of my Udacity training to become a data scientist. The
   
 ## Instructions<a name="instructions"></a>
 
-1. Take care that the link for the image directory in the dog_breed_application is correct 
+1.Take care that the link for the image directory in the dog_breed_application is correct
 "IMAGE_FOLDER = './images/' # image filepath" 
 
 2. Run the following command in the app's directory to run your web app.
