@@ -47,8 +47,9 @@ This is the final project of my Udacity training to become a data scientist. The
 
 This is how the Applicaiton should look like! 
 
-  <a name="logo" href="https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true" alt="Bear Stone Smart Home" width="200"></a>
-
+<p align="center">
+ <a name="logo" href="https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true" alt="Bear Stone Smart Home" width="200"></a>
+</p>
 ## Summary 
 
 This web application is based on three functions:
