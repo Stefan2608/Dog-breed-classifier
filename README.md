@@ -63,7 +63,7 @@ Result is one of three messages:
 ![car](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/images/car.png?raw=true)
 ![human](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/images/human.png?raw=true)
 
-The exact procedure is explained in Project Overview. Feel to check it out!
+The exact procedure is explained in Project Overview. Feel free to check it out!
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
