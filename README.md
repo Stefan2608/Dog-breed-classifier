@@ -14,7 +14,7 @@
 
 You can find all libraries you need in the requirements.txt
 
-## Project Motivation <a name=directories"></>
+## Project Motivation <a name=motivation"></a>
  
 This is the final project of my Udacity training to become a data scientist. The entire training was a lot of fun and I learned a lot and had to apply everything I learned in this project. I hope have fun using the dog breed classifier
  
@@ -47,7 +47,7 @@ This is the final project of my Udacity training to become a data scientist. The
 
 This is how the Applicaiton should look like! 
 
-[https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true]
+![Webapp](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true)
 
 
 ## Summary 
