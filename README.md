@@ -58,6 +58,10 @@ This web application is based on three functions:
 2. Human Face Detector: the uploaded image is checked for human faces.
 3. Dog breed classifier: This CNN, pre-trained with the help of a ResNet50, checks the images in which a dog or a human face was recognized and assigns them the most similar    breed of dog with an accuracy of 84,6 %.
 
+Result is one of three messages: 
+
+
+
 The exact procedure is explained in Project Overview. Feel to check it out!
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
