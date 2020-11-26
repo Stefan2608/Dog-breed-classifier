@@ -7,7 +7,7 @@
 3. [Directories](#directories)
 4. [File Description](#files)
 5. [Instructions](#instructions)
-6. [Summary] (#summary)
+6. [Summary](#summary)
 7. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
@@ -47,16 +47,17 @@ This is the final project of my Udacity training to become a data scientist. The
 
 This is how the Applicaiton should look like! 
 
-# ![Webapp](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true)
+(https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true)
 
-##Summary 
+## Summary 
+
 This web application is based on three functions:
 
 1. Dog Detector: The uploaded picture checks whether there is a dog on it.
 2. Human Face Detector: the uploaded image is checked for human faces.
 3. Dog breed classifier: This CNN, pre-trained with the help of a ResNet50, checks the images in which a dog or a human face was recognized and assigns them the most similar    breed of dog with an accuracy of 84,6 %.
 
-Diese Modell 
+The exact procedure is explained in Project Overview. Feel to check it out!
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
