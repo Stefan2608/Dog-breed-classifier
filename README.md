@@ -44,7 +44,7 @@ This is the final project of my Udacity training to become a data scientist. The
 
 4. Upload a picture and hit the button "Upload image". Your picture will now checked by the algorithm if its rather a dog or human and predicting the most fitting breed.  
 
-
+https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
