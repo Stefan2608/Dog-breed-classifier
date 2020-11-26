@@ -59,8 +59,9 @@ This web application is based on three functions:
 3. Dog breed classifier: This CNN, pre-trained with the help of a ResNet50, checks the images in which a dog or a human face was recognized and assigns them the most similar    breed of dog with an accuracy of 84,6 %.
 
 Result is one of three messages: 
-
-
+![Lab](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/images/Lab.png?raw=true)
+![car](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/images/car.png?raw=true)
+![human](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/images/human.png?raw=true)
 
 The exact procedure is explained in Project Overview. Feel to check it out!
 
