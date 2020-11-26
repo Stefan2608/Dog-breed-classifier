@@ -7,7 +7,8 @@
 3. [Directories](#directories)
 4. [File Description](#files)
 5. [Instructions](#instructions)
-6. [Licensing, Authors, and Acknowledgements](#licensing)
+6. [Summary] (#summary)
+7. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
 
@@ -42,6 +43,8 @@ This is the final project of my Udacity training to become a data scientist. The
 3. Go to http://0.0.0.0:3001/
 
 4. Upload a picture and hit the button "Upload image". Your picture will now checked by the algorithm if its rather a dog or human and predicting the most fitting breed.  
+
+
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
