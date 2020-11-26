@@ -34,6 +34,7 @@ This is the final project of my Udacity training to become a data scientist. The
   
 ## Instructions<a name="instructions"></a>
 
+
 1.Take care that the link for the image directory in the dog_breed_application is correct
 "IMAGE_FOLDER = './images/' # image filepath" 
 
@@ -42,10 +43,20 @@ This is the final project of my Udacity training to become a data scientist. The
 
 3. Go to http://0.0.0.0:3001/
 
-4. Upload a picture and hit the button "Upload image". Your picture will now checked by the algorithm if its rather a dog or human and predicting the most fitting breed.  
+4. Upload a picture and hit the button "Upload image". Your picture will now checked by the algorithm if its rather a dog or human and predicting the most fitting breed. 
+
+This is how the Applicaiton should look like! 
 
 # ![Webapp](https://github.com/Stefan2608/Dog-breed-classifier/blob/main/WebApplication.png?raw=true)
-# Webapp
+
+##Summary 
+This web application is based on three functions:
+
+1. Dog Detector: The uploaded picture checks whether there is a dog on it.
+2. Human Face Detector: the uploaded image is checked for human faces.
+3. Dog breed classifier: This CNN, pre-trained with the help of a ResNet50, checks the images in which a dog or a human face was recognized and assigns them the most similar    breed of dog with an accuracy of 84,6 %.
+
+Diese Modell 
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
